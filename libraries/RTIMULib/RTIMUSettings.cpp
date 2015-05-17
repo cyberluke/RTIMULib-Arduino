@@ -47,6 +47,10 @@
 #include "RTIMUGD20HM303DLHC.h"
 #endif
 
+#if defined(BNO055_28) || defined(BNO055_29)
+#include "RTIMUBNO055.h"
+#endif
+
 #if defined(BMP180)
 #include "RTPressureBMP180.h"
 #endif
@@ -264,6 +268,16 @@ RTIMUSettings::RTIMUSettings()
 
     m_imuType = RTIMU_TYPE_GD20HM303DLHC;
     m_I2CSlaveAddress = L3GD20H_ADDRESS1;
+#endif
+
+#ifdef BNO055_28
+    m_imuType = RTIMU_TYPE_BNO055;
+    m_I2CSlaveAddress = BNO055_ADDRESS0;
+#endif
+
+#ifdef BNO055_29
+    m_imuType = RTIMU_TYPE_BNO055;
+    m_I2CSlaveAddress = BNO055_ADDRESS1;
 #endif
 
 #ifdef BMP180

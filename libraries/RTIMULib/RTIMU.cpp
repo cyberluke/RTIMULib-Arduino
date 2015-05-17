@@ -164,6 +164,10 @@ RTFLOAT RTIMU::m_axisRotation[9] = {0, 0, -1, -1, 0, 0, 0, 1, 0};
 #include "RTIMUGD20HM303DLHC.h"
 #endif
 
+#if defined(BNO055_28) || defined(BNO055_29)
+#include "RTIMUBNO055.h"
+#endif
+
 RTIMU *RTIMU::createIMU(RTIMUSettings *settings)
 {
 #if defined(MPU9150_68) || defined(MPU9150_69)
@@ -183,6 +187,9 @@ RTIMU *RTIMU::createIMU(RTIMUSettings *settings)
 #endif
 #if defined(GD20HM303DLHC_6a) || defined(GD20HM303DLHC_6b)
     return new RTIMUGD20HM303DLHC(settings);
+#endif
+#if defined(BNO055_28) || defined(BNO055_29)
+    return new RTIMUBNO055(settings);
 #endif
 }
 

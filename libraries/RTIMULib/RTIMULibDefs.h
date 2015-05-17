@@ -41,6 +41,8 @@
 //#define GD20HM303DLHC_6b                // GD20H + M303DLHC at address 0x6b
 //#define GD20M303DLHC_6a                 // GD20 + M303DLHC at address 0x6a
 //#define GD20M303DLHC_6b                 // GD20 + M303DLHC at address 0x6b
+//#define BNO055_28                       // BNO055 at address 0x28
+//#define BNO055_29                       // BNO055 at address 0x29
 
 //  IMU type codes
 
@@ -50,6 +52,7 @@
 #define RTIMU_TYPE_GD20M303DLHC             4                   // STM L3GD20/LSM303DHLC (old Adafruit IMU)
 #define RTIMU_TYPE_MPU9250                  5                   // InvenSense MPU9250
 #define RTIMU_TYPE_GD20HM303DLHC            6                   // STM L3GD20H/LSM303DHLC (new Adafruit IMU)
+#define RTIMU_TYPE_BNO055                   7                   // BNO055
 
 //  Pressure enable defs - only one should be enabled, the rest commented out
 

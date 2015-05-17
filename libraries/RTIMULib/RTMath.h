@@ -66,8 +66,6 @@ public:
 
     static void convertToVector(unsigned char *rawData, RTVector3& vec, RTFLOAT scale, bool bigEndian);
 
-private:
-    static char m_string[1000];                             // for the display routines
 #endif // #ifndef RTARDULINK_MODE
 };
 
