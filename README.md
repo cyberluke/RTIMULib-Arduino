@@ -101,7 +101,7 @@ Check out www.richards-tech.com for more details, updates and news.
 
 Note that any older release can be obtained via the Releases tab on the repo's GitHub page.
 
-### April 30 2015 - 3.1.0
+### May 17 2015 - 3.1.0
 
 Added support for the BNO055.
 
